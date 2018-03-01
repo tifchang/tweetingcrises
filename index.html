@@ -5,25 +5,74 @@
     <title>Tweeting Crises</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Playfair+Display|Sumana" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
-  <body>
-    <h1 class="title is-2">Tweeting Crises</h1>
-    <div class="spacer-.2em"></div>
-    <h2 class="subtitle is-5">In light of a crisis, how does Twitter mobilize its users?</h2>
+  <body class="container is-fluid">
+    <div style="text-align: center;">
+      <h1 class="title is-2">Tweeting Crises</h1>
+      <h2 class="subtitle is-5">During a crisis, how does Twitter mobilize citizens around the world?</h2>
+      <div class="spacer-1em"></div>
+      <p>By: <a href="http://tifchang.com" target="_blank">Tiffany Chang</a></p>
+    </div>
+    <!-- Introduction -->
+    <div class="section">
+      <p>
+        This is my introduction.
+      </p>
+    </div>
+    <!-- Data and Methods -->
+    <div class="section">
+      <h3 class="title is-4">Data &amp; Methods</h3>
+      <p>
+        This is what I did. To fetch data from the Twitter API, I used <a href="https://cran.r-project.org/web/packages/twitteR/twitteR.pdf">twitteR</a>, an
+        R package that enables API calls from R. I also used <a href="https://cran.r-project.org/web/packages/gtrendsR/index.html">gtrendsR</a>, a R package
+        that allows API calls to fetch Google Trends data.
+        I also used.
+      </p>
+      <p>
+        Here is me code.
+      </p>
+      <br/>
+    </br/>
+      <p>
+        Here is a sample of the data.
+      </p>
+    </div>
+    <!-- Findings -->
+    <div class="section">
+      <h3 class="title is-4">Twitter instantaneously mobilizes users worldwide.</h3>
+      <p>
+        These are my findings
+      </p>
+    </div>
+    <!-- Conclusion -->
+    <div class="section">
+      <h3 class="title is-4">Looking Forward</h3>
+      <p>
+        This is my conclusion
+      </p>
+    </div>
   </body>
 
+  <!-- EASTER EGGGGGG -->
+  <br /> <br />
+  <small style="text-align: center; color: #cccccc">OIDD 215-002 - Spring 2018 | Data Project 2 | click <a>here</a> for more fun</small>
+  <br /> <br />
 
   <!-- Style -->
 <style>
   body {
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 18%;
+    padding-right: 18%;
     padding-top: 5em;
     background-color: white;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
   }
   h1 {
     font-family: 'Playfair Display', serif !important;
@@ -31,8 +80,27 @@
   h2 {
     font-family: 'Lora', serif !important;
   }
+  h3 {
+    font-family: 'Lora', serif !important;
+    font-weight: bold;
+  }
+  p {
+    font-family: 'Lora', serif !important;
+  }
+  .section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
   .spacer-.2em {
     height: 0.1em;
+    width: 100%;
+  }
+  .spacer-1em {
+    height: 0.5em;
+    width: 100%;
+  }
+  .spacer-5em {
+    height: 5em;
     width: 100%;
   }
 </style>
