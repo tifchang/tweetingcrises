@@ -22,48 +22,201 @@
     <!-- Introduction -->
     <div class="section">
       <p>
-        This is my introduction.
+        #PrayforParis, #MeToo, #_. These are hashtags that have mobilized
+        and united people all around the world in, what would have once taken
+        months, hours or even minutes. Social media platforms, especially
+        Twitter, are vectors for this magnitude of social impact. This spread of information
+        attracts attention, drives action among groups and individuals, and creates a global network effect.
+        <br /><br />
+        Twitter has been used as a core medium to share experiences
+        and gain global traction around crises. In September of 2017,
+        people used Twitter to share about Hurricane Maria in Puerto Rico. People
+        and companies, like Budweiser, have united around relief efforts to support
+        this disaster. More recently, students at the shooting at Parkland High School
+        in Florida used Twitter and other forms of social media to share their first-hand
+        experiences at the site of the shooting. The circulating videos and pictures
+        on social media have gained global traction, and have empowered citizens
+        and companies, like Dick's Sporting Goods, to take action.
+        <br /><br />
+        This analysis explores how social media, specifically Twitter, has driven
+        change around a crisis. Specifically, it explores how Twitter and online
+        traction differs between the two types of crises: shootings and natural disasters.
+        I analyzed the spread of content, its effect on stimulating online discussion and
+        interest, and compared and contrasted the content between shooting crises and natural disasters.
       </p>
     </div>
+    <hr />
     <!-- Data and Methods -->
     <div class="section">
-      <h3 class="title is-4">Data &amp; Methods</h3>
+      <h3 class="title is-4">Data &amp; Sources</h3>
       <p>
-        This is what I did. To fetch data from the Twitter API, I used <a href="https://cran.r-project.org/web/packages/twitteR/twitteR.pdf">twitteR</a>, an
-        R package that enables API calls from R. I also used <a href="https://cran.r-project.org/web/packages/gtrendsR/index.html">gtrendsR</a>, a R package
-        that allows API calls to fetch Google Trends data.
-      </p>
-      <p>
-        Here is me code.
-      </p>
-      <br/>
-    </br/>
-      <p>
-        Here is a sample of the data.
+        In order to perform the analysis on three-dimensions, I fetched data from
+        multiple sources. I used <a href="https://cran.r-project.org/web/packages/twitteR/twitteR.pdf">twitteR</a>
+        to pull tweets regarding both types of crises. I then used <a href="https://cran.r-project.org/web/packages/gtrendsR/index.html">gtrendsR</a>, a R package
+        that allows API calls to fetch Google Trends data, to retrieve information
+        on online interest over time regarding the direct topics ("Parkland Florida School Shooting",
+        "Puerto Rico Hurricane Maria") and its broader topics ("Gun Violence", "Disaster Relief") that
+        have been focal points of the respective post-crises discussions.
+        The data from Google Trends were further supported by <a href="https://cran.r-project.org/web/packages/ggmap/ggmap.pdf">ggmap</a>,
+        a R package that retrieves geocode information. This helped me visualize
+        the spread of interest within the US.
+        <br/></br/>
+        In order to perform content analysis on the Tweets, I used <a href="https://cran.r-project.org/web/packages/syuzhet/syuzhet.pdf">syuzhet</a>, a
+        sentiment analysis package, and its dependent package <a href="https://cran.r-project.org/web/packages/stringr/stringr.pdf">stringr</a>.
+        I chose the <a href="http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">NRC emotion lexicon</a> method to add more color to the text analysis.
+        <br/></br/>
+        In terms of visualization, I used <a href="http://plot.ly/r" >plotly</a> and <a href="http://ggplot2.org">ggplot2</a>.
+        Visualizations were then exported as PNG files or uploaded to the plot.ly server.
       </p>
     </div>
-    <!-- Findings -->
+    <hr />
+    <!-- Findings: gTrendsR -->
     <div class="section">
-      <h3 class="title is-4">Twitter instantaneously mobilizes users worldwide.</h3>
+      <h3 class="title is-4">How has online engagement impacted civic engagement?</h3>
       <p>
-        These are my findings
+        Some say that it should not take an tragic event like a shooting to spur
+        discussion around gun violence. Similarly, it shouldn't take a territory
+        left in devestation to start discussions around how to relieve people and
+        provide aid. But how do people actually behave? In this analysis, I focused
+        how online engagement, driven by various forms of media including Twitter,
+        have changed around political topics.
+      </p>
+      <br /><br />
+      <h4 class="title is-5">Online Interest around Hurricane Maria</h4>
+      <p class="subtitle is-6">Hurricane Maria stimulated interest around disaster relief</p>
+      <img src="./img/pr_sentiment.png"/>
+      <p>
+        Disaster relief has been a topic at mind over the 30 days around Hurricane Maria.
+        Hurricane Maria significantly drove people's engagement around disaster relief.
+        However, what's interesting to note is the steeper decreasing rate of engagement
+        around the direct topic and the lower decreasing rate of interest around
+        disaster relief. <br />
+        During this time, I believe that people were moved into discussion
+        around these topics. This crisis enabled opportunities for
+        companies like Budweiser and *INSERT OTHER COMPANY NAME* to take action
+        (and get good PR?). As individuals and companies began to take action
+        and consider how to be prepared to aid future disasters, the
+        discussion around the direct event may have tapered, but online media still provided
+        a medium for people to discuss a better future around the broader topic.
+      </p>
+      <br /><br />
+      <h4 class="title is-5">Where has online engagement spread?</h4>
+      <p class="subtitle is-6">States near Puerto Rico have been mobilized to take action.</p>
+      <img src="./img/pr_sentiment.png"/>
+      <p>
+        Traction also spread world wide, but the concentration of engagement was
+        in Puerto Rico, Trinidad & Tobago, Dominican Republic, US, and Canada. I hypothesized
+        that this was driven primarily by geographic proximity and that other countries
+        didn't necessarily find it a duty to provide aid to this situation.
+      </p>
+      <br /><br />
+      <h4 class="title is-5">Online Interest around Parkland Shooting</h4>
+      <p class="subtitle is-6">The Parkland shooting significantly drove discussion on gun violence</p>
+      <img src="./img/pr_sentiment.png"/>
+      <p>
+        Despite the number of shootings since Columbine, it's interesting to see how
+        significantly the Parkland shooting in Florida drove online engagement around
+        gun violence. Relative to the discussion around "disaster relief", which has also
+        been spurred previously by other natural disasters worldwide, online interest on
+        gun violence increased from nearly 0. More importantly, as engagement around
+        the direct event "Parkland Florida School Shooting" steeply droped, engagement
+        around "gun violence" remained. <br />
+        Students after the event were empowering others to make change on gun ownership
+        rules and have ignited advocacy against gun violence. <br />
+        **INSERT EXAMPLE TWEET**
+        As news sources have reported, this was the first time social media, like
+        Twitter and Snapchat, had huge presences in creating change on gun violence, as
+        students were able to record the event and continuously share their
+        testimonies. This caused the online discussion to remain lively and active even
+        after the event.
+      </p>
+      <br /><br />
+      <h4 class="title is-5">Where has online engagement spread?</h4>
+      <p class="subtitle is-6">Cities all over the U.S. are engaged.</p>
+      <img src="./img/pr_sentiment.png"/>
+      <p>
+        Cities around the immediate area were the most engaged. However,
+        engagement spread all across the U.S. evenly. This showed that
+        despite location, gun violence was an issue many empathize and engage with especially
+        given the number of episodes of shootings within the U.S. since the 1990's.
       </p>
     </div>
+    <!-- Findings: twitteR -->
+    <div class="section">
+      <h3 class="title is-4">How does the circulating content compare between crises?</h3>
+      <p>
+        Amidst a crisis, we can anticipate relatively negative sentiment (sadness, anger, frustration).
+        Normalizing for a baseline negative sentiment, tweets revolving around
+        Parkland' shooting exhibited slightly more positive sentiment.
+      </p> <br />
+      <p><i>* Emotion-text association under NRC calibrates negative values with sad,
+            anger, frustration, disgust and positive values with happy, love, and appreciation.
+            These values are summed across a 20 tweets per crisis subset.
+      </i></p>
+      <br /><br />
+      <h4 class="title is-5">Parkland Shooting Tweet Sentiment</h4>
+      <p class="subtitle is-6">Tweets resembled relatively neutral &amp; some positive biased sentiment.</p>
+      <img src="./img/fl_sentiment.png"/>
+      <br /><br />
+      <h4 class="title is-5">Hurricane Maria Tweet Sentiment</h4>
+      <p class="subtitle is-6">Tweets resembled relatively neutral sentiment.</p>
+      <img src="./img/pr_sentiment.png"/>
+      <p>
+        Diving deeper into the tweets, the content regarding Hurricane Maria were centered
+        around the still rising death counts despite the elapsed time. Furthermore,
+        there has been significant debate to see what President Trump will do to aid. Since
+        significant time has elapsed since the incident, much of the content analyzed
+        are around relief efforts and prolonging suffering, giving the analysis
+        a neutral to negative bias in comparison to the shooting. <br />
+        It's interesting to note that in the Parkland shooting tweets, there are some
+        positive sentiments despite how recent the event is. This is mostly attributed
+        to by posts of hope, prayer, and solidarity.
+      </p>
+    </div>
+    <hr />
     <!-- Conclusion -->
     <div class="section">
-      <h3 class="title is-4">Looking Forward</h3>
+      <h3 class="title is-4">Conclusion</h3>
+      <h4 class="title is-5">Disclaimers</h4>
       <p>
-        This is my conclusion
+        There are a few limitations to my analysis. Twitter's API does not permit
+        fetching tweets beyond a week of the current day. Therefore, it was difficult
+        to fetch the tweets around the time of the crisis to perform a sentiment
+        analysis on. I am aware that the tweets I performed my analysis on were skewed
+        towards a specific type of tweet. For example, I hypothesize that tweets closer
+        to the date of the event are a lot more emotional since the event is still
+        fresh. The early tweeters and retweeters around a crisis tend to be more
+        emotional and therefore kickstart the inertia around calling people to action
+        around "gun violence" and "disaster relief". However, it was still interesting
+        to compare and contrast the sentiment around these two crises in light of their
+        time frame differences. Regarding tracking the trends of broader topics and visualization, I
+        did not take into account the effect other natural disasters within that timeline
+        had on the data. For example, around the same time, Houston experienced a
+        disasterous hurricane, which drove a high count for engagement in "disaster relief"
+        around Texas.
+      </p> <br />
+      <h4 class="title is-5">Looking Forward</h4>
+      <p>
+        Looking forward, I'd like to look at content across various mediums
+        since not all countries are effectively using Twitter as frequently
+        as countries like the US, Canada, and UK. In order to get a more comprehensive
+        view, I'd look into WeChat, WhatsApp, and more. If I had time, I would normalize
+        the graph for sentiment analysis against a baseline level of negative sentiment
+        around crises. I'd do so by looking at the average sentiment around crises
+        using a larger data set of content (by finding ways to bypass API limitation).
+        Overall, this analysis has given me
+        more insight on how people respond to crises on social media and how it
+        drives other topic engagements.
       </p>
     </div>
   </body>
 
   <!-- EASTER EGGGGGG -->
-  <br /> <br />
-  <small style="text-align: center; color: #cccccc">OIDD 215-002 - Spring 2018 | Data Project 2 | <a href="pt.html">click here</a> for more ~fun~</small>
-
-  <br /> <br />
-
+  <div style="display: flex; justify-content: center;">
+    <br /> <br />
+    <small style="text-align: center; color: #cccccc">OIDD 215-002 - Spring 2018 | Data Project 2 | <a target="_blank" href="pt.html">click here</a> for more ~fun~</small>
+    <br /> <br />
+  </div>
   <!-- Style -->
 <style>
   body {
@@ -84,12 +237,19 @@
     font-family: 'Lora', serif !important;
     font-weight: bold;
   }
+  h4 {
+    font-family: 'Lora', serif !important;
+    font-weight: bold;
+  }
   p {
     font-family: 'Lora', serif !important;
   }
+  i {
+    color: #a1a1a1;
+  }
   .section {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   .spacer-.2em {
     height: 0.1em;

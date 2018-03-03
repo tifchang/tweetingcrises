@@ -14,21 +14,101 @@
   </head>
   <body class="container is-fluid">
     <h1 class="title is-4">Professor Tambe's Most Frequently Used Words</h1>
-    <h2 class="subtitle is-6">A breakdown by class, driven primarily by curriculum.</h2>
-    <iframe width="900" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~tifchang/1.embed"></iframe>  </body>
+    <h2 class="subtitle is-6">A lexicon driven by research, curriculum and passion.</h2>
+    <!-- <iframe width="900" height="600" frameborder="0" scrolling="no" src="https://plot.ly/~tifchang/1.embed"></iframe>  </body> -->
     <br />
     <p>
       Industries are dynamically shifting, and the significance data plays in
       terms of decision making continues to grow. Professor Tambe is a passionate advocate for
       equipping students at Wharton with the necessary tools to enter all industries. He
       believes in fully grasping the fundamental data tools, like R, tableau, and S.Q.L. (he says
-      'es-kew-el', not sequel, he's a man of his time), to develop upon future skills
+      'es-kyo͞o-el', not sequel, he's a man of his time), to develop upon future skills
       like "machine learning", and throw around big words with integrity like "big data".
-      How did I jump to this conclusion? By listening to him in lecture. <br /><br />
+      How did I jump to this conclusion?
       If you listen to his word choice, you might just understand what this man is all about.<br /><br />
       This analysis focuses on the word choice Professor Tambe uses over the course of OIDD 215.
       It provides unique insights into the course's primary focus as well as probably the most
       important 10 things you should take away from this class.
+    </p>
+    <br /><br />
+    <h2 class="title is-5">Data Source &amp; Methods</h2>
+    <p>
+      The data was collected first-hand. I tracked key words in his
+      lecture content. Occasionally, when I was not paying attention, the lecture
+      slides helped me calibrate to the potential key words that could appear.
+      I also used <i>Stickies</i>, an application compatible with OSX operating systems,
+      that allowed me to keep a simple tally on 10 key words. Some difficulties I faced was
+      deciding on the key words. I had an initial set of 6, but over time realized there were other
+      words that were also relevant. Therefore, some of my data may be skewed since tracking
+      commenced only after I had made the decision to track it. However, I have full
+      faith that this sophisticated procedure and the technologically advanced tools
+      have more than enabled me to collect the sufficient data for this indepth analysis.
+    </p>
+    <br /><br />
+    <h2 class="title is-5">Example Data</h2>
+    <table class="table is-bordered is-narrow">
+      <thead>
+        <tr>
+          <th></th>
+          <th>"(Big) Data"</th>
+          <th>"Amazon"</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>Class 1</td>
+            <td>10</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>Class 2</td>
+            <td>4</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Class 3</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+      </tbody>
+    </table>
+
+    <br /><br />
+    <h2 class="title is-5">Drivers</h2>
+    <h3 class="subtitle is-6">Events and factors that drive major trends</h3>
+    <ul>
+      <li><b>Labs</b>: on classes we have labs, we exhibit a drastic decrease in the overall word count.
+      That's because PT does not speak very much, if at all. Most of his word count is spent at the individual level, between
+      a single student. I've chosen to not include this level of analysis since there is too much variation. PT fields questions
+      ranging from "Why is my Tableau showing me one dot?" to "I can't turn on R" to "Can we eat at Pod?". Therefore, this creates too much noise in the analysis and
+      it is best to stay with lecture content.</li> <br />
+      <li><b>Exams</b>: similar to labs, PT does not talk during exams. He spends most of his time drinking coffee instead. This makes sense
+      as, contrasting to a normal class or Slack, we can't rely on PT (or even Juan for that matter) to answer all our petty questions 24/7 on-demand.</li> <br />
+      <li><b>Topics</b>: the class is broken down by topics. Therefore, word choice is heavily (basically directly) influenced by the topic being taught.
+      However, PT occasionally mixes these topics (and therefore words across topics have non-zero frequencies) to emphasize how
+      this course comes together to make students "fully equipped data scientists" such that we will get any of those jobs from McKinsey, Intel, or Indeed postings he lists on the slides. Contrary to popular belief, PT believes we are in high demand on the job market.</li><br />
+      <li><b>Intros &amp; Conclusions</b>: PT occasionally has lectures that don't include any new content but more or less is a peptalk for us
+        to realize we're worth more and better at analytics than we think we are. This is the time he drops a lot of the buzzwords to better acquaint us with how to properly use it so that one day we can use them and not sound like fools.</li>
+    </ul>
+    <br /><br />
+    <h2 class="title is-5">Trends</h2>
+    <p>
+      Driven by the "Intros &amp; Conclusions" factor, we exhibit a U-shaped trend line
+      for most of the words. However, when crossing certain topics, we see significant spikes
+      (like "R") on days the topic is introduced. Since the course was only taught over 14
+      classes, a few of those which were labs, it's difficult to see a consistent trend
+      with the words.
+      Amazon and McKinsey takes a precedence as the only proper nouns. PT praises these firms
+      as the "#1 recruiter" and "consulting firm that doesn't start with a B", and makes
+      an effort to remind us of the ever-shifting job industry. From this analysis, we are to forever remember
+      that these firms outplace Google, Facebook, BCG, and Bain, since PT did not prioritize them.
+    </p>
+    <br /><br />
+    <h2 class="title is-5">Conclusion</h2>
+    <p>
+      It's good to note that this analysis was done out of sheer boredom on a 10 hour flight
+      to Hawaii, but to not discount that PT was the Professor we all hoped for
+      our first years at Wharton. Yes, the data is real. Deuces–see ya'll in 245.
     </p>
     <div class="spacer-5em"></div>
   <!-- Style -->
@@ -52,6 +132,9 @@
     font-weight: bold;
   }
   p {
+    font-family: 'Lora', serif !important;
+  }
+  ul {
     font-family: 'Lora', serif !important;
   }
   .section {
